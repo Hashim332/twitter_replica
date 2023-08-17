@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tweeter</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐔</text></svg>">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'comic': ['Comic Sans MS', 'sans-serif']
+                    },
+                    colors: {
+                        'primary': {
+                            '50': '#f4f7fb',
+                            '100': '#e9eef5',
+                            '200': '#cedbe9',
+                            '300': '#a3bdd6',
+                            '400': '#7199bf',
+                            '500': '#4f7ca8',
+                            '600': '#3c638d',
+                            '700': '#325072',
+                            '800': '#2c4560',
+                            '900': '#243447',
+                            '950': '#1b2636',
+                        },
+                        'secondary': {
+                            '50': '#f0f8ff',
+                            '100': '#e0f0fe',
+                            '200': '#bae1fd',
+                            '300': '#7dcafc',
+                            '400': '#38b0f8',
+                            '500': '#1da1f2',
+                            '600': '#0176c8',
+                            '700': '#035ea1',
+                            '800': '#075085',
+                            '900': '#0c436e',
+                            '950': '#082a49',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+
+<body class="bg-primary-900 text-white">
+
+    <!-- Flex box containing all 3 main box elements on home page-->
+    <main class="flex flex-row justify-between divide-x-2 divide-slate-200">
+        <!-- Left side bar-->
+        <div class="ml-80 mr-14">
+            <!-- Image of bird-->
+            <div class="mx-3 my-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                </svg>
+
+            </div>
+            <div class="my-2 flex flex-col items-start">
+                <div class="py-3 hover:bg-gray-600 hover:rounded-3xl text-lg px-5">
+                    <a href="">🏠 Home</a>
+                </div>
+                <div class="py-3 hover:bg-gray-600 hover:rounded-3xl text-lg px-5">
+                    <a href="">🔍 Explore</a>
+                </div>
+                <div class="py-3 hover:bg-gray-600 hover:rounded-3xl text-lg px-5">
+                    <a href="">🔔 Notifcations</a>
+                </div>
+                <div class="py-3 hover:bg-gray-600 hover:rounded-3xl text-lg px-5">
+                    <a href="">📧 Messages</a>
+                </div>
+                <div class="py-3 hover:bg-gray-600 hover:rounded-3xl text-lg px-5">
+                    <a href="">🔖 Bookmarks</a>
+                </div>
+                <div class="py-3 hover:bg-gray-600 hover:rounded-3xl text-lg px-5">
+                    <a href="">🧑 Profile</a>
+                </div>
+                <div class="py-3 hover:bg-gray-600 hover:rounded-3xl text-lg px-5">
+                    <a href="">⚙️ More</a>
+                </div>
+            </div>
+
+            <div>
+                <a href=""><button
+                        class="bg-secondary-500 hover:bg-secondary-600 py-2 px-16 rounded rounded-3xl text-xl">Tweet</button></a>
+            </div>
+
+        </div>
+
+        <!-- Feed -->
+        <div class="flex flex-col grow">
+            <a href="" class="text-xl font-bold p-2">Home</a>
+            <div class="flex flex-row justify-evenly font-semibold">
+                <a href="" class="hover:bg-gray-600 p-4 grow text-center">For You</a>
+                <a href="" class="hover:bg-gray-600 p-4 grow text-center">Following</a>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Right side options-->
+        <div class="mr-80">
+            <div class="ml-5 my-5">
+                <input type="text" class="bg-gray-700 rounded-3xl outline-none px-5 py-3 w-full"
+                    placeholder="🔍Search Twitter">
+            </div>
+
+            <div class="bg-gray-700 my-5 rounded-xl p-3 ml-5">
+                <p class="font-bold text-2xl m-2">Get Verified</p>
+                <p class="font-bold text-xl m-2">Subscribe to unlock new features</p>
+                <div class="m-2">
+                    <a href="">
+                        <button class="v">
+                            Get Verified</button></a>
+                </div>
+            </div>
+
+            <div class="bg-gray-700 my-6 rounded-xl ml-5">
+                <p class="text-2xl font-bold p-3">What's happening</p>
+                <div class="p-3">
+                    <p class="text-xs text-gray-400">Music • Trending</p>
+                    <p class="font-bold">Pink Tape</p>
+                    <p class="text-xs text-gray-400">18.3K Tweets</p>
+                </div>
+                <div class="p-3">
+                    <p class="text-xs text-gray-400">Video game genres • Trending</p>
+                    <p class="font-bold">Counter-strike</p>
+                    <p class="text-xs text-gray-400">2,141 Tweets</p>
+                </div>
+                <div class="p-3">
+                    <p class="text-xs text-gray-400">Gaming • Trending</p>
+                    <p class="font-bold">Riot</p>
+                    <p class="text-xs text-gray-400">36K Tweets</p>
+                </div>
+                <div href="" class="text-secondary-500 p-3"><a href="">Show more</a></div>
+            </div>
+
+            <div class="bg-gray-700 my-5 rounded-xl flex ml-5">
+                <div>
+                    <p class="text-2xl font-bold p-3">Who to Follow</p>
+                    <div>
+                        <div class="flex flex-row justify-between">
+                            <div class="p-3 flex flex-row w-[250px]">
+                                <img src="/images/kam_pfp.jpg" alt="" class="w-10 h-10 rounded-[50%]">
+                                <div class="px-3">
+                                    <p>Kam</p>
+                                    <p class="class= text-xs text-gray-400">@asmkam_0</p>
+                                </div>
+                            </div>
+
+                            <a href=""
+                                class="bg-gray-200 hover:bg-gray-300 py-2 px-16 rounded rounded-3xl text-gray-900 font-bold px-4 h-10 m-auto"><button>Follow</button></a>
+                        </div>
+
+                        <div>
+                            <div class="flex flex-row justify-between">
+                                <div class="p-3 flex flex-row w-[250px]">
+                                    <img src="/images/ali_pfp.jpg" alt="" class="w-10 h-10 rounded-[50%]">
+                                    <div class="px-3">
+                                        <p>Ali</p>
+                                        <p class="class= text-xs text-gray-400">@imbraindead</p>
+                                    </div>
+                                </div>
+
+                                <a href=""
+                                    class="bg-gray-200 hover:bg-gray-300 py-2 px-16 rounded rounded-3xl text-gray-900 font-bold px-4 h-10 m-auto"><button>Follow</button></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex flex-row justify-between">
+                                <div class="p-3 flex flex-row w-[250px]">
+                                    <img src="/images/jalal_pfp.jpg" alt="" class="w-10 h-10 rounded-[50%]">
+                                    <div class="px-3">
+                                        <p>Jalal</p>
+                                        <p class="class= text-xs text-gray-400">@f1_fan34</p>
+                                    </div>
+                                </div>
+
+                                <a href=""
+                                    class="bg-gray-200 hover:bg-gray-300 py-2 px-16 rounded rounded-3xl text-gray-900 font-bold px-4 h-10 m-auto"><button>Follow</button></a>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+    </main>
+
+
+</body>
+
+</html>
